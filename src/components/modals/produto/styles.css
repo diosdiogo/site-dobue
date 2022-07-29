@@ -1,0 +1,8 @@
+.card-group{
+    display: block;
+}
+@media (min-width: 576px){
+    .modal-dialog {
+        max-width: 733px !important;
+    }
+}

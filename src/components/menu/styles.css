@@ -1,0 +1,48 @@
+.ml-auto, .mx-auto {
+    margin-left: auto!important;
+}
+
+.icon{
+    margin-right: 8px !important;
+    font-size: 16px;
+  }
+  .toolbar{
+    padding: 0 0 0px 20px;
+    background-color: #512B42 !important;
+    color:#FFFFFF !important;
+    font-size: 12px !important;
+    height: 48px;
+  }
+  .content-toobar{
+    display: flex;
+  }
+  .logo-dobue{
+    top:0;
+    width: 253px;
+  }
+  .navbar{
+    padding: 0 1rem;
+  }
+  .nav-link{
+    font-size: 12px;
+    color: #000;
+    font-weight: 600;
+  }
+  .link-rede-social{
+    color: #fff;
+  }
+  @media (max-width: 980px) {
+    .logo-dobue{
+        width: 150px !important;
+    }
+  }
+  @media(max-width: 760px){
+    .header-fone{
+        display: none;
+    }
+    .social-toobar{
+        display: flex;
+        align-items: flex;
+        margin-top: 8px;
+    }
+  }
