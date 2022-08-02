@@ -50,7 +50,7 @@ class ModalProduto extends Component<Props> {
             <>
             <Modal
                 show={dados.show}
-                onHide={dados.onHide}
+                onHide={dados.onHide.bind(this)}
                 id="modalProduto"
             >
                 <Modal.Header closeButton />

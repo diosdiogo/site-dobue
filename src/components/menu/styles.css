@@ -31,6 +31,9 @@
   .link-rede-social{
     color: #fff;
   }
+  .nav-item{
+    cursor: pointer;
+  }
   @media (max-width: 980px) {
     .logo-dobue{
         width: 150px !important;

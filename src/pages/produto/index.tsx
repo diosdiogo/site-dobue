@@ -60,12 +60,16 @@ class Produto extends Component {
     }
 
     async handleClose() {
+        console.log("entrou")
         this.setState((state) => ({
             show: false
         }));
     }
     render(){
         const dados : any = this.state;
+        const handleChande = () => {
+            this.handleClose();
+        }
         return (
             <>
               <div style={{ backgroundColor:'#F3F3F3', marginTop: '15px' }}>
@@ -95,7 +99,7 @@ class Produto extends Component {
                     </div>
                 </div>
               </div>
-              <ModalProduto grupo_id={dados.grupo_id} show={dados.show} produto={dados.produto} onHide={() => this.handleClose.bind(this)}/>
+              <ModalProduto grupo_id={dados.grupo_id} show={dados.show} produto={dados.produto} onHide={handleChande}/>
             </>
         )
     }

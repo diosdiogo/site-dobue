@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import './styles.css';
+import history from '../../util/history';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagranmIcon from '@material-ui/icons/Instagram'
@@ -27,7 +28,16 @@ class Menu extends Component<Props> {
     async componentDidMount(){
         
     }
+
     render(){
+        const handleNavigate = async (e) => {
+            try{ 
+              history.push(e)
+            }catch(error){
+                console.log(error)
+            }
+        }
+
         const dados : any = this.state;
         return (
             <>
@@ -49,7 +59,7 @@ class Menu extends Component<Props> {
                         <EmailIcon className="icon" />
                         <span style={{marginRight: '15px'}}> { dados.contato.email_principal }
                         </span>
-                            <a href={ dados.social[0].social_url } className="link-rede-social">
+                            <a onClick={() => handleNavigate('/')}className="link-rede-social">
                                 <FacebookIcon style={{marginRight: '15px'}} />
                             </a>
                             <a href={ dados.social[1].social_url } className="link-rede-social">
@@ -69,13 +79,13 @@ class Menu extends Component<Props> {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div className="navbar-nav ml-auto">
-                            <a className="nav-item nav-link" href="/">{ dados.menu.modulo1 }</a>
-                            <a className="nav-item nav-link" href="/sobre">{ dados.menu.modulo2 }</a>
-                            <a className="nav-item nav-link" href="/produto">{ dados.menu.modulo3 }</a>
-                            <a className="nav-item nav-link" href="/clientes">{ dados.menu.modulo4 }</a>
-                            <a className="nav-item nav-link" href="/representante">{ dados.menu.modulo5 }</a>
-                            <a className="nav-item nav-link" href="/contato">{ dados.menu.modulo6 }</a>
-                            <a className="nav-item nav-link" href="/download">{ dados.menu.modulo7 }</a>
+                            <a className="nav-item nav-link" onClick={() => handleNavigate('/')}>{ dados.menu.modulo1 }</a>
+                            <a className="nav-item nav-link" onClick={() => handleNavigate('/sobre')}>{ dados.menu.modulo2 }</a>
+                            <a className="nav-item nav-link" onClick={() => handleNavigate('/produto')}>{ dados.menu.modulo3 }</a>
+                            <a className="nav-item nav-link" onClick={() => handleNavigate('/clientes')}>{ dados.menu.modulo4 }</a>
+                            <a className="nav-item nav-link" onClick={() => handleNavigate('/representante')}>{ dados.menu.modulo5 }</a>
+                            <a className="nav-item nav-link" onClick={() => handleNavigate('/contato')}>{ dados.menu.modulo6 }</a>
+                            <a className="nav-item nav-link" onClick={() => handleNavigate('/download')}>{ dados.menu.modulo7 }</a>
                         </div>
                     </div>
                 </nav>
