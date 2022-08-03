@@ -157,7 +157,7 @@ class Rodape extends Component<Props> {
                 ----------------------------------------------------> */}
 
                 <div className="rodape-2">
-                    <div className="contaier">
+                    <div className="container">
                         <div className="row">
                             <div className="col">
                                 <span>Dodue Movelaria © 2021 | Todos os direitos reservados</span>
